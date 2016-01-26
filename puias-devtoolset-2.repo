@@ -1,0 +1,6 @@
+[PUIAS_DevToolset-2]
+name=PUIAS DevToolset v2 $releasever - $basearch
+baseurl=http://puias.princeton.edu/data/puias/DevToolset/$releasever/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puias

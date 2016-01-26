@@ -1,0 +1,6 @@
+[PUIAS_6_computational]
+name=PUIAS computational Base $releasever - $basearch
+baseurl=http://puias.princeton.edu/data/puias/computational/$releasever/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puias
