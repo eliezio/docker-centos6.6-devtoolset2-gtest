@@ -2,7 +2,7 @@ FROM centos:centos6.6
 MAINTAINER Eliezio Oliveira "e.b.o@ieee.org"
 
 WORKDIR /etc/pki/rpm-gpg
-ADD http://puias.princeton.edu/data/puias/6/x86_64/os/RPM-GPG-KEY-puias .
+ADD assets/RPM-GPG-KEY-puias .
 RUN rpm --import RPM-GPG-KEY-puias
 COPY puias-*.repo /etc/yum.repos.d/
 WORKDIR /
@@ -20,7 +20,7 @@ COPY popt.pc /usr/lib64/pkgconfig/
 
 ENV GTEST_VERSION 1.7.0
 WORKDIR /usr/local/src
-ADD https://googletest.googlecode.com/files/gtest-${GTEST_VERSION}.zip .
+ADD assets/gtest-${GTEST_VERSION}.zip .
 RUN unzip -q gtest-${GTEST_VERSION}.zip && rm gtest-${GTEST_VERSION}.zip
 WORKDIR /
 
