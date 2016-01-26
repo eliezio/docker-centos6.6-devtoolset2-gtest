@@ -1,9 +1,10 @@
 FROM centos:centos6.6
 MAINTAINER Eliezio Oliveira "e.b.o@ieee.org"
 
-WORKDIR /etc/pki/rpm-gpg
-ADD assets/RPM-GPG-KEY-puias .
-RUN rpm --import RPM-GPG-KEY-puias
+ENV RPM_GPG_DIR /etc/pki/rpm-gpg
+WORKDIR ${RPM_GPG_DIR}
+ADD http://puias.princeton.edu/data/puias/6/x86_64/os/RPM-GPG-KEY-puias ${RPM_GPG_DIR}/
+RUN rpm --import ${RPM_GPG_DIR}/RPM-GPG-KEY-puias
 COPY puias-*.repo /etc/yum.repos.d/
 WORKDIR /
 
