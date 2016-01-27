@@ -27,3 +27,4 @@ WORKDIR /
 
 ENV GTEST_ROOT /usr/local/src/gtest-${GTEST_VERSION}
 
+VOLUME /workspace
