@@ -27,4 +27,7 @@ WORKDIR /
 
 ENV GTEST_ROOT /usr/local/src/gtest-${GTEST_VERSION}
 
-VOLUME /workspace
+VOLUME /src
+VOLUME /build
+
+WORKDIR /build
