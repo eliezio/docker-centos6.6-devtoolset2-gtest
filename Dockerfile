@@ -29,5 +29,6 @@ ENV GTEST_ROOT /usr/local/src/gtest-${GTEST_VERSION}
 
 VOLUME /src
 VOLUME /build
+VOLUME /dist
 
 WORKDIR /build
