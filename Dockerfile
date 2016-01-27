@@ -21,7 +21,7 @@ COPY popt.pc /usr/lib64/pkgconfig/
 
 ENV GTEST_VERSION 1.7.0
 WORKDIR /usr/local/src
-ADD assets/gtest-${GTEST_VERSION}.zip .
+ADD https://googletest.googlecode.com/files/gtest-${GTEST_VERSION}.zip /usr/local/src/
 RUN unzip -q gtest-${GTEST_VERSION}.zip && rm gtest-${GTEST_VERSION}.zip
 WORKDIR /
 
