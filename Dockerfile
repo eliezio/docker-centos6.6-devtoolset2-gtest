@@ -1,5 +1,5 @@
 FROM centos:centos6.6
-MAINTAINER Eliezio Oliveira "e.b.o@ieee.org"
+MAINTAINER Eliezio Oliveira "eliezio.oliveira@gmail.com"
 
 ENV RPM_GPG_DIR /etc/pki/rpm-gpg
 WORKDIR ${RPM_GPG_DIR}
