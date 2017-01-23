@@ -9,7 +9,8 @@ COPY puias-*.repo /etc/yum.repos.d/
 # "yum check-update" yields a non-zero return code even when successful!
 RUN yum -q check-update; yum -y install redhat-lsb-core rpm-build cmake unzip patch \
 popt-devel zlib-devel glib2-devel \
-devtoolset-2-binutils devtoolset-2-gcc devtoolset-2-gcc-c++
+devtoolset-2-binutils devtoolset-2-gcc devtoolset-2-gcc-c++ \
+squid telnet
 
 # to make DevToolset-2 applications default
 COPY devtoolset-2.sh /etc/profile.d/
