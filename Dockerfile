@@ -8,7 +8,7 @@ COPY puias-*.repo /etc/yum.repos.d/
 
 # yum-plugin-ovl is required to make Yum compatible with Docker OverlayFS
 RUN yum install -y yum-plugin-ovl epel-release \
-    && yum -y install redhat-lsb-core rpm-build cmake popt-devel zlib-devel glib2-devel libsodium \
+    && yum -y install redhat-lsb-core rpm-build git cmake popt-devel zlib-devel glib2-devel libsodium \
                       devtoolset-2-binutils devtoolset-2-gcc devtoolset-2-gcc-c++
 
 # Fixes missing PkgConfig metadata file from popt-devel package
